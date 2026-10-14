@@ -1,4 +1,4 @@
-# 具身证据台
+# 机器人精细操作产业链研究台
 
 研究机器人精细操作所需的执行与感知产业链：微型驱动与传动、灵巧手、力觉/触觉、3D视觉，并连接到装配、分拣、柔顺抓取、研究与遥操作等下游应用。
 
@@ -6,7 +6,7 @@
 
 ## 访问与运行
 
-Web产品：[具身证据台](https://embodied-evidence-lab-20261014.elven-mug-1563.chatgpt.site)。源码仓库：[xialuoteyaoyunyi/embodied-evidence-lab](https://github.com/xialuoteyaoyunyi/embodied-evidence-lab)。正式演示视频由候选人完成产品验收后亲自录制，录制顺序见`docs/DEMO_SCRIPT.md`。
+Web产品：[机器人精细操作产业链研究台](https://embodied-evidence-lab-20261014.elven-mug-1563.chatgpt.site)。源码仓库：[xialuoteyaoyunyi/embodied-evidence-lab](https://github.com/xialuoteyaoyunyi/embodied-evidence-lab)。正式演示视频由候选人完成产品验收后亲自录制，录制顺序见`docs/DEMO_SCRIPT.md`。
 
 环境：Node.js 22.13以上，npm。开发服务基于 React、Vinext、Vite；生产打包为 Cloudflare Worker，由 Sites 托管。部署平台集成位于 `build/sites-vite-plugin.ts`，不是单纯静态页面。
 

@@ -15,3 +15,6 @@
 .acceptance{margin-top:20px}.acceptance table{width:100%;min-width:560px;border-collapse:collapse;font-size:13px}.acceptance th,.acceptance td{text-align:left;vertical-align:top;padding:14px;border-bottom:1px solid #e1e8e5}.acceptance th{background:#edf3f1}.acceptance h2{margin-bottom:16px}.delivery-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}.delivery-links a{padding:14px;background:#edf4f1;border-radius:8px}.video-pending{padding:15px;background:#fff5e5;margin-top:16px}.execution-merge{margin-left:0;margin-right:33.333%;justify-content:space-around}.execution-merge:after{left:25%;right:25%}.execution-merge:before{left:50%}
 
 .update-form fieldset.form-grid{border:0;padding:0;margin:0;min-width:0}
+
+/* Industry-chain product name: keep the full title readable in the sidebar. */
+.brand{gap:9px;font-size:16px;letter-spacing:0}.brand-title{line-height:1.55;min-width:0}.brand-title small{font-size:7px;letter-spacing:1px;margin-top:5px}.brand-symbol{width:36px;height:36px;flex-shrink:0}@media(min-width:801px) and (max-width:1150px){.brand{font-size:13px;gap:7px}.brand-title small{font-size:6px;letter-spacing:.5px}}
