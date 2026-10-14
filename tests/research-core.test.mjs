@@ -13,12 +13,15 @@ test('sales cannot be upgraded to E4 without amount',()=>assert.throws(()=>valid
 test('group revenue scope cannot be E4',()=>{const i={...input,text:'公司总营业收入为100元。'};assert.throws(()=>validateCandidate({...candidate,stage:'E4',quote:i.text,revenue:{amount:'100',scope:'集团总额'}},i),/收入级/);});
 test('specific business revenue E4 accepted',()=>{const i={...input,text:'机器人力学传感器业务收入100万元。'};assert.equal(validateCandidate({...candidate,stage:'E4',quote:i.text,revenue:{amount:'100',scope:'业务分项'}},i).stage,'E4');});
 test('shipment number falsely used as revenue rejected',()=>assert.throws(()=>validateCandidate({...candidate,stage:'E4',revenue:{amount:'1500',scope:'业务分项'}},input),/收入级/));
+test('E4 amount elsewhere in document cannot be assigned to product',()=>{const i={...input,text:'集团收入100万元。机器人力学传感器收入未单列。'};assert.throws(()=>validateCandidate({...candidate,stage:'E4',quote:'机器人力学传感器收入未单列。',revenue:{amount:'100',scope:'业务分项'}},i),/同一段/);});
+test('invented product scope for group-only quote rejected',()=>{const i={...input,text:'公司集团营业收入100万元。'};assert.throws(()=>validateCandidate({...candidate,stage:'E4',quote:i.text,revenue:{amount:'100',scope:'业务分项'}},i),/目标业务/);});
 test('E3 without sales signal rejected',()=>assert.throws(()=>validateCandidate({...candidate,quote:'客户送样超过70家'},input),/销售级/));
 test('strategic statement E1 retained',()=>{const i={...input,text:'公司计划未来进入人形机器人市场，尚处于战略研究阶段。'};assert.equal(validateCandidate({...candidate,stage:'E1',quote:'计划未来进入人形机器人市场'},i).stage,'E1');});
 test('future date rejected',()=>assert.throws(()=>validateInput({...input,date:'2099-01-01'})));
 test('invalid date rejected',()=>assert.throws(()=>validateInput({...input,date:'2026-02-30'})));
 test('oversized material rejected',()=>assert.throws(()=>validateInput({...input,text:'字'.repeat(16001)})));
 test('sensitive credential pattern blocked',()=>assert.throws(()=>validateInput({...input,text:'API_KEY=private-key-contents-should-not-be-uploaded'}),/密钥/));
+test('GitHub upload credential cannot be used as research material',()=>assert.throws(()=>validateInput({...input,text:'GITHUB_TOKEN=do-not-upload-this-as-research-input'}),/密钥/));
 test('positive volume can still mean declining revenue',()=>{const r=scenario({volumeGrowth:20,priceChange:-30});assert.ok(r.after<r.before);assert.equal(r.after,168000);});
 test('zero adoption yields zero revenue',()=>assert.equal(scenario({adoption:0}).after,0));
 test('negative or nonfinite inputs rejected',()=>{assert.throws(()=>scenario({share:-1}));assert.throws(()=>scenario({price:Infinity}));});

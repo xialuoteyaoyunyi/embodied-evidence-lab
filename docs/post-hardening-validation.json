@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-14T10:25:36.767Z",
+  "method": "Revalidate stored real Kimi outputs against hardened validator; no simulated provider call",
+  "results": [
+    {
+      "name": "真实销售材料不升级为量化收入",
+      "stage": "E3",
+      "passed": true
+    },
+    {
+      "name": "集团收入不能作为灵巧手收入",
+      "stage": "E2",
+      "passed": true
+    },
+    {
+      "name": "有分项收入但不能全部归机器人",
+      "stage": "E4",
+      "passed": true
+    }
+  ]
+}

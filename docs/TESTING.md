@@ -19,7 +19,7 @@
 
 ## 已执行证据
 
-`baseline-validation.json`：8项官方PDF财务值、原文关键词与页码匹配。`ai-validation.json`：修正后的4个实际Kimi用例通过。`ai-validation-initial.json`和`ai-validation-v11-rejected.json`保留失败与拦截。`browser-qa.json`：浏览器主链路通过、无页面异常、手机无横向溢出。`test-results.txt`：37项确定性测试通过。`api-boundaries.json`：7项真实HTTP边界检查通过。各文件只记实际执行，不把计划标为通过。
+`baseline-validation.json`：8项官方PDF财务值、原文关键词与页码匹配。`ai-validation.json`：修正后的4个实际Kimi用例通过。`ai-validation-initial.json`和`ai-validation-v11-rejected.json`保留失败与拦截。`browser-qa.json`：浏览器主链路通过、无页面异常、手机无横向溢出。`test-results.txt`：40项确定性测试通过。`api-boundaries.json`：7项真实HTTP边界检查通过。`production-qa.json`：公网健康HTTP200、无访问码403、真实线上Kimi调用200/E3；在线浏览器工具未完成复核，Node直连遇平台403，不能把它标为浏览器验收通过。各文件只记实际执行，不把计划标为通过。
 
 原型中的输入校验、引用匹配、场景计算和历史日期处理均有可重复的Node测试。模型输出变化可能导致新的422，这是预期的拦截行为，不能当成模型已经可靠地产生正确答案。
 
