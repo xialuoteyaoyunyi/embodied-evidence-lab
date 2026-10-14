@@ -19,16 +19,18 @@
 
 ## 已执行证据
 
-`baseline-validation.json`：8项官方PDF财务值、原文关键词与页码匹配。`ai-validation.json`：修正后的4个实际Kimi用例通过。`ai-validation-initial.json`和`ai-validation-v11-rejected.json`保留失败与拦截。`browser-qa.json`：浏览器主链路通过、无页面异常、手机无横向溢出。`test-results.txt`：40项确定性测试通过。`api-boundaries.json`：7项真实HTTP边界检查通过。`production-qa.json`：公网健康HTTP200、无访问码403、真实线上Kimi调用200/E3；在线浏览器工具未完成复核，Node直连遇平台403，不能把它标为浏览器验收通过。各文件只记实际执行，不把计划标为通过。
+`baseline-validation.json`：8项官方PDF财务值、原文关键词与页码匹配。`ai-validation.json`：修正后的4个实际Kimi用例通过。`ai-validation-initial.json`和`ai-validation-v11-rejected.json`保留失败与拦截。`browser-qa.json`：浏览器主链路通过、无页面异常、手机无横向溢出。`test-results.txt`：47项确定性测试通过（含7项扶摇异常、缺失值和追溯验证）。`api-boundaries.json`：7项真实HTTP边界检查通过。`production-qa.json`：公网健康HTTP200、无访问码403、真实线上Kimi调用200/E3；在线浏览器工具未完成复核，Node直连遇平台403，不能把它标为浏览器验收通过。各文件只记实际执行，不把计划标为通过。
 
 原型中的输入校验、引用匹配、场景计算和历史日期处理均有可重复的Node测试。模型输出变化可能导致新的422，这是预期的拦截行为，不能当成模型已经可靠地产生正确答案。
 
 ## 未验证与局限
 
-没有扶摇/iFinD真实接口，无法验证它们的鉴权、字段、额度或许可证；适配器明确未配置。未验证分布式限流、长期多用户负载与集中数据库一致性。没有完整PDF在线解析，新增文本的远程真实性依赖用户核对。外部官网HEAD可能405或重定向，此时提示来源访问失败/需核对，并保留快照。
+扶摇已实际验证5个请求（行情、估值、三家公司利润表），见fuyao-validation.json；接口原始返回仅在忽略目录outputs留存。iFinD仍无真实验证。扶摇公开再分发许可、长期额度与全部能力权限未验证；仅提供访问码保护的样本查询。未验证分布式限流、长期多用户负载与集中数据库一致性。没有完整PDF在线解析，新增文本的远程真实性依赖用户核对。外部官网HEAD可能405或重定向，此时提示来源访问失败/需核对，并保留快照。
 
 浏览器持久化依赖localStorage；隐私模式、容量满或用户清理会丢失本机记录，应导出备份。来源日期不同可能代表历史与后续事项，不按访问日期自动提升成熟度。产品材料精度未做独立测量。
 
 ## 复现
 
 启动开发服务后：`npm test`、`node node_modules/typescript/bin/tsc --noEmit`、`node scripts/qa-browser.mjs`。真实模型验证：`node scripts/live-ai-validation.mjs`，需有效Kimi配置并会消耗少量API额度。
+
+扶摇复现：node --env-file=.env.fuyao scripts/verify-fuyao.mjs。正式后台接口POST /api/fuyao要求研究访问码、同源检查、10秒查询间隔，支持部分权限失败，5分钟进程缓存；来源故障保留屏幕上已有数据并标原查询时间。

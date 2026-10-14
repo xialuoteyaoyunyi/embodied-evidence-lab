@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-14T11:10:59.172Z",
+  "health": {
+    "status": "ok",
+    "aiConfigured": true,
+    "model": "kimi-k2.6",
+    "accessCodeRequired": false,
+    "snapshot": "2026-10-14",
+    "dataMode": "official-materials-and-authorized-fuyao",
+    "ifindConnected": false,
+    "fuyaoConfigured": true,
+    "fuyaoStatus": "configured-query-to-verify"
+  },
+  "authorizedStatus": 200,
+  "successfulRequests": 5,
+  "rateLimitStatus": 429
+}

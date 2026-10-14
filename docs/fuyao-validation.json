@@ -1,0 +1,58 @@
+{
+  "verifiedAt": "2026-10-14T11:07:32.298Z",
+  "provider": "fuyao",
+  "sampleCodes": [
+    "003021.SZ",
+    "603662.SH",
+    "688322.SH"
+  ],
+  "requests": [
+    {
+      "kind": "prices",
+      "status": "ok",
+      "endpoint": "https://fuyao.aicubes.cn/api/a-share/prices/snapshot?thscodes=003021.SZ%2C603662.SH%2C688322.SH",
+      "requestId": "d1c7a21a790b491cbbc5ebf459edbe3d",
+      "sourceTimestamp": "2026-10-14T11:07:29.000Z",
+      "itemCount": 3,
+      "missingCodes": []
+    },
+    {
+      "kind": "valuations",
+      "status": "ok",
+      "endpoint": "https://fuyao.aicubes.cn/api/a-share/valuations/snapshot?thscodes=003021.SZ%2C603662.SH%2C688322.SH",
+      "requestId": "fd79d47243e14dcf8276e0509573fe1d",
+      "sourceTimestamp": "2026-10-14T11:07:32.000Z",
+      "itemCount": 3,
+      "missingCodes": []
+    },
+    {
+      "kind": "financials:003021.SZ",
+      "status": "ok",
+      "endpoint": "https://fuyao.aicubes.cn/api/a-share/financials/income-statements?thscode=003021.SZ&period=quarterly&limit=2",
+      "requestId": "9164196418fe4ed48b771a76bb9e0876",
+      "sourceTimestamp": "2026-06-29T16:00:00.000Z",
+      "itemCount": 2,
+      "missingCodes": []
+    },
+    {
+      "kind": "financials:603662.SH",
+      "status": "ok",
+      "endpoint": "https://fuyao.aicubes.cn/api/a-share/financials/income-statements?thscode=603662.SH&period=quarterly&limit=2",
+      "requestId": "c5776ad24f2b4827b6f86ea7df1f7649",
+      "sourceTimestamp": "2026-06-29T16:00:00.000Z",
+      "itemCount": 2,
+      "missingCodes": []
+    },
+    {
+      "kind": "financials:688322.SH",
+      "status": "ok",
+      "endpoint": "https://fuyao.aicubes.cn/api/a-share/financials/income-statements?thscode=688322.SH&period=quarterly&limit=2",
+      "requestId": "a0c96b817bc74c4499a6fb6a49a915fb",
+      "sourceTimestamp": "2026-06-29T16:00:00.000Z",
+      "itemCount": 2,
+      "missingCodes": []
+    }
+  ],
+  "rawRecord": "outputs/fuyao-verification.json (ignored, private)",
+  "scope": "Group consolidated financials; no robot business revenue inferred"
+}
