@@ -6,14 +6,14 @@
 
 ## 访问与运行
 
-Web产品：[机器人精细操作产业链研究台](https://embodied-evidence-lab-20261014.elven-mug-1563.chatgpt.site)。源码仓库：[xialuoteyaoyunyi/embodied-evidence-lab](https://github.com/xialuoteyaoyunyi/embodied-evidence-lab)。正式演示视频由候选人完成产品验收后亲自录制，录制顺序见`docs/DEMO_SCRIPT.md`。
+Web产品：[机器人精细操作产业链研究台](https://embodied-evidence-lab-20261014.elven-mug-1563.chatgpt.site)。源码仓库：[xialuoteyaoyunyi/embodied-evidence-lab](https://github.com/xialuoteyaoyunyi/embodied-evidence-lab)
 
 环境：Node.js 22.13以上，npm。开发服务基于 React、Vinext、Vite；生产打包为 Cloudflare Worker，由 Sites 托管。部署平台集成位于 `build/sites-vite-plugin.ts`，不是单纯静态页面。
 
 ```sh
 npm ci
 cp .env.example .env.local
-# 在 .env.local 中填写 KIMI_API_KEY，不要提交密钥。
+# 在 .env.local 中填写 KIMI_API_KEY
 node --env-file=.env.local scripts/run-framework.mjs dev
 # http://127.0.0.1:5173/
 npm test
@@ -21,7 +21,6 @@ node node_modules/typescript/bin/tsc --noEmit
 npm run build
 ```
 
-Windows可使用记事本编辑 `.env.local`。托管生产环境使用平台的秘密环境变量：`KIMI_API_KEY`、`KIMI_MODEL`、`FUYAO_API_KEY`、`IFIND_AUTHORIZATION`、`RESEARCH_ACCESS_CODE`、`REVIEW_SIGNING_KEY`。公开AI调用必须输入私有评审访问码，证据浏览不需要访问码。访问码仅保留在页面内存。密钥不进入源码、客户端、研究导出或日志。
 
 ## 目标用户与核心任务
 
@@ -81,7 +80,7 @@ Codex辅助完成研究设计、官方材料查找、代码实现和测试。基
 
 `docs/TESTING.md`覆盖主链路、数据与接口异常、合规边界、实际执行结果和未验证事项。核心逻辑测试运行于Node；浏览器脚本使用Playwright和本机Edge。实际Kimi调用测试不模拟模型输出，另有确定性验证器测试覆盖伪造引用、收入口径和非法来源。
 
-`scripts/qa-browser.mjs`及`scripts/live-ai-validation.mjs`需要开发服务运行；浏览器脚本默认调用本机无需访问码服务。运行真实AI验证会产生少量API费用。交付包含源码、README、测试与AI记录及60–180秒录制脚本；正式视频依照候选人要求由其亲自录制，目前待完成。
+`scripts/qa-browser.mjs`及`scripts/live-ai-validation.mjs`需要开发服务运行；浏览器脚本默认调用本机无需访问码服务。运行真实AI验证会产生少量API费用。交付包含源码、README、测试与AI记录
 
 ## 源码结构
 
