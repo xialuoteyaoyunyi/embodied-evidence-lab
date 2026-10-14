@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-14T11:41:10.115Z",
+  "health": {
+    "status": "ok",
+    "aiConfigured": true,
+    "model": "kimi-k2.6",
+    "accessCodeRequired": false,
+    "snapshot": "2026-10-14",
+    "dataMode": "official-materials-and-authorized-providers",
+    "ifindConfigured": true,
+    "ifindStatus": "configured-query-to-verify",
+    "fuyaoConfigured": true,
+    "fuyaoStatus": "configured-query-to-verify"
+  },
+  "invalidRequestStatus": 400,
+  "authorizedBusinessStatus": 200,
+  "resultStatus": "returned-pending-verification",
+  "tool": "get_stock_summary",
+  "rpcId": "f475027e-6530-40c4-baf5-d1e1aefa9169",
+  "rateLimitStatus": 429,
+  "reportStatus": "unsupported"
+}

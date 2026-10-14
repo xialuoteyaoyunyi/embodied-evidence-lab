@@ -1,0 +1,151 @@
+{
+  "verifiedAt": "2026-10-14T11:39:56.508Z",
+  "officialSkillVersion": "1.4.0",
+  "officialSkillDirectory": "C:/Users/xialu/.codex/skills/ifind-finance-data",
+  "skillSelfcheck": "passed; actual listTools(stock)",
+  "services": [
+    {
+      "service": "stock",
+      "status": "ok",
+      "tools": [
+        "get_stock_summary",
+        "search_stocks",
+        "get_stock_performance",
+        "get_stock_info",
+        "get_stock_shareholders",
+        "get_stock_financials",
+        "get_risk_indicators",
+        "get_stock_events",
+        "get_esg_data",
+        "stock_highfreq_quotes"
+      ]
+    },
+    {
+      "service": "news",
+      "status": "ok",
+      "tools": [
+        "search_notice",
+        "search_news",
+        "search_trending_news"
+      ]
+    },
+    {
+      "service": "edb",
+      "status": "ok",
+      "tools": [
+        "get_edb_data",
+        "search_edb"
+      ]
+    },
+    {
+      "service": "global_stock",
+      "status": "ok",
+      "tools": [
+        "search_global_stocks",
+        "global_stock_profile",
+        "global_stock_quotes",
+        "global_stock_financial",
+        "global_stock_events"
+      ]
+    },
+    {
+      "service": "future",
+      "status": "ok",
+      "tools": [
+        "future_profile",
+        "future_quotes"
+      ]
+    },
+    {
+      "service": "index",
+      "status": "ok",
+      "tools": [
+        "index_data",
+        "sector_data",
+        "index_highfreq_quotes"
+      ]
+    }
+  ],
+  "liveQueries": [
+    {
+      "category": "notice",
+      "server": "news",
+      "tool": "search_notice",
+      "args": {
+        "query": "柯力传感 2026年半年度报告 机器人六维力传感器销售与业务进展",
+        "time_start": "2026-07-01",
+        "time_end": "2026-10-14",
+        "size": 3
+      },
+      "retrievedAt": "2026-10-14T11:32:38.273Z",
+      "transportStatus": 200,
+      "rpcResultPresent": true
+    },
+    {
+      "category": "industry",
+      "server": "edb",
+      "tool": "search_edb",
+      "args": {
+        "query": "中国工业机器人产量 当月值 同比增长 国家统计局"
+      },
+      "retrievedAt": "2026-10-14T11:32:39.479Z",
+      "transportStatus": 200,
+      "rpcResultPresent": true
+    },
+    {
+      "category": "macro",
+      "server": "edb",
+      "tool": "get_edb_data",
+      "args": {
+        "query": "中国制造业采购经理指数PMI 2026年7月至2026年9月 月度值"
+      },
+      "retrievedAt": "2026-10-14T11:32:41.894Z",
+      "transportStatus": 200,
+      "rpcResultPresent": true
+    },
+    {
+      "category": "commodity",
+      "server": "future",
+      "tool": "future_quotes",
+      "args": {
+        "query": "沪铜主力连续 2026年10月9日至2026年10月14日 收盘价 元每吨"
+      },
+      "retrievedAt": "2026-10-14T11:32:46.193Z",
+      "transportStatus": 200,
+      "rpcResultPresent": true
+    },
+    {
+      "category": "crossmarket",
+      "server": "global_stock",
+      "tool": "global_stock_financial",
+      "args": {
+        "query": "Novanta Inc 美股NOVT 2025财年合并营业收入和净利润 原始美元金额 报告期和币种"
+      },
+      "retrievedAt": "2026-10-14T11:32:49.277Z",
+      "transportStatus": 200,
+      "rpcResultPresent": true
+    },
+    {
+      "category": "business",
+      "server": "stock",
+      "tool": "get_stock_summary",
+      "args": {
+        "query": "兆威机电 主营业务 微型驱动系统 灵巧手 产品进展 最新披露日期"
+      },
+      "retrievedAt": "2026-10-14T11:32:53.222Z",
+      "transportStatus": 200,
+      "rpcResultPresent": true
+    }
+  ],
+  "notAvailable": [
+    "Dedicated industry-chain graph tool",
+    "Dedicated brokerage research-report retrieval tool"
+  ],
+  "qualityBoundaries": [
+    "Notice fragments may be summarized, truncated or lack original URL/page.",
+    "Foreign currency and MRQ/annual scope require source verification.",
+    "Commodity output may include weekend dates; verify trading-day/fill-forward semantics."
+  ],
+  "rawResults": "outputs/ifind-live-research.json (private, ignored)",
+  "webTransport": "Official website HTTPS proxy https://mcp.51ifind.com/ds-mcp-servers; tools/list and tools/call verified with authorized key; no third-party proxy"
+}
