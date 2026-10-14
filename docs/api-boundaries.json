@@ -1,0 +1,40 @@
+{
+  "runAt": "2026-10-14T09:57:23.257Z",
+  "tests": [
+    {
+      "name": "cross-origin request denied",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "name": "malformed JSON denied",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "name": "unknown mode denied",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "name": "trade advice denied",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "name": "unapproved source denied",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "name": "source ID injection denied",
+      "status": 400,
+      "passed": true
+    },
+    {
+      "name": "health omits secret values",
+      "status": 200,
+      "passed": true
+    }
+  ]
+}

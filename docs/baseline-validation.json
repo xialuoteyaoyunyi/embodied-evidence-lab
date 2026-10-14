@@ -1,0 +1,54 @@
+{
+  "verifiedAt": "2026-10-14",
+  "method": "PDF文本定位与数值核验；空白规范化，不代表独立业务审计",
+  "checks": [
+    {
+      "company": "zhaowei",
+      "pdfPage": 7,
+      "valueOrKeyword": "1,715,534,329.63",
+      "passed": true
+    },
+    {
+      "company": "zhaowei",
+      "pdfPage": 21,
+      "valueOrKeyword": "批量化生产工作持续推进",
+      "passed": true
+    },
+    {
+      "company": "keli",
+      "pdfPage": 8,
+      "valueOrKeyword": "1,558,438,867.20",
+      "passed": true
+    },
+    {
+      "company": "keli",
+      "pdfPage": 12,
+      "valueOrKeyword": "战略投资",
+      "passed": true
+    },
+    {
+      "company": "keli",
+      "pdfPage": 12,
+      "valueOrKeyword": "1500",
+      "passed": true
+    },
+    {
+      "company": "orbbec",
+      "pdfPage": 9,
+      "valueOrKeyword": "940,743,637.65",
+      "passed": true
+    },
+    {
+      "company": "orbbec",
+      "pdfPage": 48,
+      "valueOrKeyword": "机器人业务收入增长",
+      "passed": true
+    },
+    {
+      "company": "orbbec",
+      "pdfPage": 49,
+      "valueOrKeyword": "290,934,711.69",
+      "passed": true
+    }
+  ]
+}

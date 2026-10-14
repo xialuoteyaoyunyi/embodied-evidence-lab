@@ -1,0 +1,262 @@
+{
+  "runAt": "2026-10-14T09:52:16.862Z",
+  "kind": "live-provider-calls",
+  "results": [
+    {
+      "name": "真实销售材料不升级为量化收入",
+      "input": {
+        "name": "真实销售材料不升级为量化收入",
+        "mode": "extract",
+        "input": {
+          "company": "柯力传感",
+          "branch": "force",
+          "concept": "机器人力学传感器",
+          "title": "柯力传感2025年年度报告",
+          "url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225199660.PDF",
+          "date": "2026-04-28",
+          "locator": "PDF第12页",
+          "text": "报告期内，机器人力学传感器销售量超过1500只，送样客户数超过70家，已进入小批量生产向批量化供应过渡的发展阶段。"
+        },
+        "expected": "E3"
+      },
+      "expectedStage": "E3",
+      "status": 200,
+      "passed": true,
+      "durationMs": 10853,
+      "output": {
+        "candidate": {
+          "claim": "柯力传感机器人力学传感器已有明确销售，销售量超过1500只，送样客户数超过70家，处于小批量生产向批量化供应过渡阶段",
+          "quote": "报告期内，机器人力学传感器销售量超过1500只，送样客户数超过70家，已进入小批量生产向批量化供应过渡的发展阶段。",
+          "stage": "E3",
+          "limit": "仅披露销售量，未披露具体收入金额；未明确收入是否单独列报为业务分项或产品分项；时点为2025年报告期内",
+          "concept": "机器人力学传感器",
+          "revenue": null,
+          "verified": "AI提取 · 待人工确认",
+          "company": "柯力传感",
+          "branch": "force",
+          "sourceTitle": "柯力传感2025年年度报告",
+          "sourceUrl": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225199660.PDF",
+          "date": "2026-04-28",
+          "locator": "PDF第12页"
+        },
+        "input": {
+          "company": "柯力传感",
+          "branch": "force",
+          "concept": "机器人力学传感器",
+          "title": "柯力传感2025年年度报告",
+          "url": "https://static.cninfo.com.cn/finalpage/2026-04-28/1225199660.PDF",
+          "date": "2026-04-28",
+          "locator": "PDF第12页",
+          "text": "报告期内，机器人力学传感器销售量超过1500只，送样客户数超过70家，已进入小批量生产向批量化供应过渡的发展阶段。"
+        },
+        "model": "kimi-k2.6",
+        "usage": {
+          "prompt_tokens": 430,
+          "completion_tokens": 127,
+          "total_tokens": 557,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1
+          }
+        },
+        "requestId": "chatcmpl-6acf4fe10861ee3b07bc9591",
+        "promptVersion": "extract-v1.1",
+        "inputSha256": "9d7f1238443643ae95093fa30532deb1004b2b6b6f440ff0118c227e98a9c875",
+        "createdAt": "2026-10-14T09:48:27.736Z"
+      }
+    },
+    {
+      "name": "集团收入不能作为灵巧手收入",
+      "input": {
+        "name": "集团收入不能作为灵巧手收入",
+        "mode": "extract",
+        "input": {
+          "company": "兆威机电",
+          "branch": "hand",
+          "concept": "机器人灵巧手",
+          "title": "兆威机电2025年年报",
+          "url": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225057987.PDF",
+          "date": "2026-03-31",
+          "locator": "PDF第7页、第21页",
+          "text": "公司2025年营业收入为1,715,534,329.63元。目前公司灵巧手产品批量化生产工作持续推进。"
+        },
+        "expected": "E2"
+      },
+      "expectedStage": "E2",
+      "status": 200,
+      "passed": true,
+      "durationMs": 3393,
+      "output": {
+        "candidate": {
+          "claim": "兆威机电灵巧手产品处于批量化生产工作持续推进阶段，具备生产能力但未明确销售、订单或收入",
+          "quote": "目前公司灵巧手产品批量化生产工作持续推进。",
+          "stage": "E2",
+          "limit": "仅提及批量化生产工作推进，未明确灵巧手产品具体销售、交付、订单或收入金额；集团总收入1,715,534,329.63元未单列灵巧手业务分项",
+          "concept": "机器人灵巧手",
+          "revenue": null,
+          "verified": "AI提取 · 待人工确认",
+          "company": "兆威机电",
+          "branch": "hand",
+          "sourceTitle": "兆威机电2025年年报",
+          "sourceUrl": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225057987.PDF",
+          "date": "2026-03-31",
+          "locator": "PDF第7页、第21页"
+        },
+        "input": {
+          "company": "兆威机电",
+          "branch": "hand",
+          "concept": "机器人灵巧手",
+          "title": "兆威机电2025年年报",
+          "url": "https://static.cninfo.com.cn/finalpage/2026-03-31/1225057987.PDF",
+          "date": "2026-03-31",
+          "locator": "PDF第7页、第21页",
+          "text": "公司2025年营业收入为1,715,534,329.63元。目前公司灵巧手产品批量化生产工作持续推进。"
+        },
+        "model": "kimi-k2.6",
+        "usage": {
+          "prompt_tokens": 428,
+          "completion_tokens": 104,
+          "total_tokens": 532,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1
+          }
+        },
+        "requestId": "chatcmpl-6acf4ffc66b3944e3b79d406",
+        "promptVersion": "extract-v1.1",
+        "inputSha256": "67cbf91f37f9772ea2e748038827f1abcddd8a6f0ca5bbb3564e3e8743fe6163",
+        "createdAt": "2026-10-14T09:48:47.138Z"
+      }
+    },
+    {
+      "name": "有分项收入但不能全部归机器人",
+      "input": {
+        "name": "有分项收入但不能全部归机器人",
+        "mode": "extract",
+        "input": {
+          "company": "奥比中光",
+          "branch": "vision",
+          "concept": "3D视觉传感器",
+          "title": "奥比中光2025年年报",
+          "url": "https://static.cninfo.com.cn/finalpage/2026-04-20/1225123796.PDF",
+          "date": "2026-04-20",
+          "locator": "PDF第49页",
+          "text": "主营业务分产品：3D视觉传感器营业收入290,934,711.69元，营业成本132,591,177.44元，毛利率54.43%。该产品包含多种应用场景，不是单列机器人收入。"
+        },
+        "expected": "E4"
+      },
+      "expectedStage": "E4",
+      "status": 200,
+      "passed": true,
+      "durationMs": 3250,
+      "output": {
+        "candidate": {
+          "claim": "奥比中光3D视觉传感器业务2025年营业收入为290,934,711.69元",
+          "quote": "3D视觉传感器营业收入290,934,711.69元，营业成本132,591,177.44元，毛利率54.43%",
+          "stage": "E4",
+          "limit": "该产品包含多种应用场景，不是单列机器人收入；为2025年全年数据；无法区分是否包含机器人领域收入",
+          "concept": "3D视觉传感器",
+          "revenue": {
+            "amount": "290,934,711.69",
+            "currency": "元",
+            "scope": "产品分项",
+            "period": "2025年"
+          },
+          "verified": "AI提取 · 待人工确认",
+          "company": "奥比中光",
+          "branch": "vision",
+          "sourceTitle": "奥比中光2025年年报",
+          "sourceUrl": "https://static.cninfo.com.cn/finalpage/2026-04-20/1225123796.PDF",
+          "date": "2026-04-20",
+          "locator": "PDF第49页"
+        },
+        "input": {
+          "company": "奥比中光",
+          "branch": "vision",
+          "concept": "3D视觉传感器",
+          "title": "奥比中光2025年年报",
+          "url": "https://static.cninfo.com.cn/finalpage/2026-04-20/1225123796.PDF",
+          "date": "2026-04-20",
+          "locator": "PDF第49页",
+          "text": "主营业务分产品：3D视觉传感器营业收入290,934,711.69元，营业成本132,591,177.44元，毛利率54.43%。该产品包含多种应用场景，不是单列机器人收入。"
+        },
+        "model": "kimi-k2.6",
+        "usage": {
+          "prompt_tokens": 443,
+          "completion_tokens": 128,
+          "total_tokens": 571,
+          "cached_tokens": 256,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1
+          },
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          }
+        },
+        "requestId": "chatcmpl-6acf500f66b3944e3b79d410",
+        "promptVersion": "extract-v1.1",
+        "inputSha256": "cc0680e4896ba69dbd7065398e6c8910c32086a7d9250735e40b3b9d20e6b5b5",
+        "createdAt": "2026-10-14T09:49:06.399Z"
+      }
+    },
+    {
+      "name": "证据问答的引用范围",
+      "input": {
+        "name": "证据问答的引用范围",
+        "mode": "research",
+        "company": "keli",
+        "question": "为什么不能把柯力集团收入全部归为机器人传感器收入？"
+      },
+      "expectedStage": null,
+      "status": 200,
+      "passed": true,
+      "output": {
+        "answer": {
+          "summary": "柯力集团总收入约15.58亿元（2025自然年），不能全部归为机器人力学传感器收入，因为：1）年报仅披露机器人力学传感器销量超1500只、送样客户超70家，未量化对应收入占比；2）传统力学传感器及仪表系列仍是主要收入来源；3）对触觉企业的战略投资属于股权布局，不形成母公司自产量产收入。",
+          "findings": [
+            {
+              "kind": "事实",
+              "text": "年报披露机器人力学传感器销售量超过1500只、送样客户超过70家，但明确'尚不能量化对应收入占比'。",
+              "evidenceIds": [
+                "E-KL-F"
+              ]
+            },
+            {
+              "kind": "事实",
+              "text": "传统力学传感器及仪表系列收入不等于机器人六维力收入，集团总收入包含传统工业传感及并购业务。",
+              "evidenceIds": [
+                "E-KL-F"
+              ]
+            },
+            {
+              "kind": "事实",
+              "text": "对触觉相关企业的战略投资属于股权布局，未据此认定集团自产触觉产品已有量产收入。",
+              "evidenceIds": [
+                "E-KL-T"
+              ]
+            },
+            {
+              "kind": "推断",
+              "text": "基于上述信息，机器人力学传感器业务目前仅为集团整体收入中的未量化占比部分，无法将集团15.58亿元总收入全部归为该类收入。",
+              "evidenceIds": [
+                "E-KL-F",
+                "E-KL-T"
+              ]
+            }
+          ],
+          "boundary": "未获取柯力传感2025年报中传统业务与机器人业务的具体收入拆分数据；机器人力学传感器的确切收入金额待公司进一步披露。"
+        },
+        "model": "kimi-k2.6",
+        "usage": {
+          "prompt_tokens": 790,
+          "completion_tokens": 313,
+          "total_tokens": 1103,
+          "completion_tokens_details": {
+            "reasoning_tokens": 1
+          }
+        },
+        "requestId": "chatcmpl-6acf50c89467b10c82eaaca8",
+        "promptVersion": "research-v1.1",
+        "createdAt": "2026-10-14T09:52:16.842Z"
+      }
+    }
+  ]
+}

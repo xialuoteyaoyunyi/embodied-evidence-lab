@@ -1,0 +1,6 @@
+/** Future integration contract. No claims of connected Fuyao/iFinD services. */
+export type Provider='fuyao'|'ifind'|'official-public';
+export interface ResearchDocument {provider:Provider;providerDocumentId:string;companyId:string;title:string;publishedAt:string;retrievedAt:string;originalUrl:string;locator:string;text:string;license:string;contentSha256:string;}
+export interface FinancialMetric {provider:Provider;companyId:string;metric:string;value:number|null;unit:string;currency:string;periodStart:string;periodEnd:string;scope:'group'|'segment'|'product';sourceDocumentId:string;locator:string;}
+export interface ResearchAdapter {readonly provider:Provider;connectionStatus():Promise<'connected'|'not-configured'|'unavailable'>;documents(companyId:string,since:string):Promise<ResearchDocument[]>;metrics(companyId:string,period:string):Promise<FinancialMetric[]>;}
+export class UnconfiguredAdapter implements ResearchAdapter {constructor(public readonly provider:'fuyao'|'ifind'){}async connectionStatus(){return 'not-configured' as const;}async documents():Promise<ResearchDocument[]>{throw new Error(this.provider+' access is not configured; do not silently replace with fabricated data');}async metrics():Promise<FinancialMetric[]>{throw new Error(this.provider+' access is not configured');}}

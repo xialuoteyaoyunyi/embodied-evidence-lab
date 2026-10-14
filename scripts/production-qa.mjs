@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';import assert from 'node:assert/strict';import {createRequire} from 'node:module';
+const base='https://embodied-evidence-lab-20261014.elven-mug-1563.chatgpt.site';
+const code=(await fs.readFile('outputs/AI访问码.txt','utf8')).split('\n')[0].split('：')[1];
+const health=await fetch(base+'/api/health').then(r=>r.json());assert.equal(health.aiConfigured,true);assert.equal(health.accessCodeRequired,true);
+const denied=await fetch(base+'/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:'{"mode":"extract"}'});assert.equal(denied.status,403);
+const sample=JSON.parse(await fs.readFile('docs/ai-validation.json','utf8')).results[0].input;
+const r=await fetch(base+'/api/ai',{method:'POST',headers:{'Content-Type':'application/json','x-research-access':code},body:JSON.stringify(sample)});const j=await r.json();assert.equal(r.status,200,JSON.stringify(j));assert.equal(j.candidate.stage,'E3');
+const require=createRequire(import.meta.url);let pw;try{pw=require('playwright');}catch{pw=require('C:/Users/xialu/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');}
+const browser=await pw.chromium.launch({channel:'msedge',headless:true});const page=await browser.newPage({viewport:{width:1440,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto(base);await page.getByRole('heading',{name:'产业链图谱',exact:true}).waitFor();await page.getByRole('button',{name:'跨市场比较',exact:true}).click();await page.getByRole('heading',{name:'为何可比'}).waitFor();await page.screenshot({path:'outputs/production-compare.png',fullPage:true});await browser.close();assert.deepEqual(errors,[]);
+await fs.writeFile('docs/production-qa.json',JSON.stringify({checkedAt:new Date().toISOString(),url:base,publicPageAccessible:true,health,withoutCodeStatus:denied.status,authorizedKimiStatus:r.status,authorizedKimiStage:j.candidate.stage,model:j.model,promptVersion:j.promptVersion,requestId:j.requestId,pageErrors:errors,passed:true},null,2));console.log('Production public access, AI protection, live Kimi and browser checks passed');

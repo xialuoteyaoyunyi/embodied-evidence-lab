@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+const p='app/api/ai/route.ts';let s=fs.readFileSync(p,'utf8');s=s.replace("import {researchEnv}","import {validateAnswer,providerError} from '@/lib/ai-validation.mjs';\nimport {researchEnv}");
+s=s.replace('每条结论必须引用实际存在的evidence.id；无依据则写证据不足。','每条事实和推断必须引用context里实际存在的id字段（例如E-KL-F）。不得引用S-KL等sourceId。待验证问题允许空evidenceIds。无依据则写待验证或证据不足。');
+s=s.replace('JSON.stringify({question:body.question,company,context,sources:', 'JSON.stringify({allowedEvidenceIds:context.map(e=>e.id),question:body.question,company,context,sources:');
+const start=s.indexOf('   const known=new Set(context.map(e=>e.id));');const end=s.indexOf('   return Response.json({answer:',start);
+if(start<0||end<0)throw new Error('Validation section not found');
+s=s.slice(0,start)+"   try{validateAnswer(parsed,context.map(e=>e.id));}catch{return error('AI结果引用校验未通过，请缩小研究问题',422);}\n"+s.slice(end);
+const cstart=s.indexOf(' }catch(e){const m=(e as Error).message;');
+if(cstart<0)throw new Error('Error mapping section not found');
+s=s.slice(0,cstart)+" }catch(e){const mapped=providerError((e as Error).message);return error(mapped.error,mapped.status);}\n}\n";
+s=s.replace("promptVersion:'research-v1.0'","promptVersion:'research-v1.1'");fs.writeFileSync(p,s);

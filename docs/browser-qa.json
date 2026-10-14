@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "pageErrors": [],
+  "checks": [
+    "company evidence locator",
+    "comparison boundaries",
+    "negative price scenario",
+    "live Kimi extraction",
+    "confirmation persistence",
+    "source ledger",
+    "mobile no overflow"
+  ]
+}

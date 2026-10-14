@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-10-14T10:10:26.0120271Z",
+  "url": "https://embodied-evidence-lab-20261014.elven-mug-1563.chatgpt.site",
+  "healthStatus": 200,
+  "health": {
+    "status": "ok",
+    "aiConfigured": true,
+    "model": "kimi-k2.6",
+    "accessCodeRequired": true,
+    "snapshot": "2026-10-14",
+    "dataMode": "official-public-materials",
+    "ifindConnected": false,
+    "fuyaoConnected": false
+  },
+  "withoutCodeStatus": 403,
+  "authorizedKimiStatus": 200,
+  "authorizedKimiStage": "E3",
+  "requestId": "chatcmpl-6acf542ea332bc64668b1294",
+  "method": "PowerShell HTTPS requests",
+  "browserVerification": "pending",
+  "nodeDirectFetch": "403 HTML edge-protection response; not treated as application result"
+}

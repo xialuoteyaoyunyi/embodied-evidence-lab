@@ -1,0 +1,45 @@
+✔ valid answer with pending questions accepted (1.2183ms)
+✔ fabricated evidence IDs rejected (1.5872ms)
+✔ facts without evidence rejected (0.2098ms)
+✔ provider error AI_NOT_CONFIGURED (0.2014ms)
+✔ provider error UPSTREAM_401 (0.105ms)
+✔ provider error UPSTREAM_429 (0.0843ms)
+✔ provider error UPSTREAM_500 (0.0717ms)
+✔ provider error AI_TRUNCATED (0.068ms)
+✔ provider error AI_BAD_FORMAT (0.1411ms)
+✔ provider error TimeoutError (0.1939ms)
+✔ official HTTPS source accepted (1.3288ms)
+✔ reject source http://static.cninfo.com.cn/a (0.5152ms)
+✔ reject source https://static.cninfo.com.cn.evil.test/a (0.2758ms)
+✔ reject source https://user:password@static.cninfo.com.cn/a (0.3424ms)
+✔ reject source https://127.0.0.1/a (0.3009ms)
+✔ reject source file:///etc/passwd (0.1959ms)
+✔ reject source javascript:alert(1) (0.1186ms)
+✔ reject source https://static.cninfo.com.cn:8443/a (0.1067ms)
+✔ valid extraction input and canonical relation (1.865ms)
+✔ fabricated quote rejected (0.875ms)
+✔ E0 fabricated quote also rejected (0.2279ms)
+✔ E0 without quote allowed and preserves insufficient evidence (0.1479ms)
+✔ sales cannot be upgraded to E4 without amount (0.122ms)
+✔ group revenue scope cannot be E4 (0.1908ms)
+✔ specific business revenue E4 accepted (0.5245ms)
+✔ shipment number falsely used as revenue rejected (0.3528ms)
+✔ E3 without sales signal rejected (0.2767ms)
+✔ strategic statement E1 retained (0.1601ms)
+✔ future date rejected (0.2798ms)
+✔ invalid date rejected (0.1942ms)
+✔ oversized material rejected (0.1722ms)
+✔ sensitive credential pattern blocked (0.197ms)
+✔ positive volume can still mean declining revenue (0.3197ms)
+✔ zero adoption yields zero revenue (0.0575ms)
+✔ negative or nonfinite inputs rejected (0.1243ms)
+✔ older evidence does not replace current (0.2211ms)
+✔ stage changes require confirmation (0.0661ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 165.7209
