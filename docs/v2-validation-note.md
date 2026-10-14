@@ -1,0 +1,3 @@
+# 验收记录说明
+
+生产闭环验证记录见v2-production-validation.json。自动化记录写入validation空间，正式research空间保持0条。浏览器实际操作记录见v2-browser-validation.json。首轮PowerShell验收因ConvertFrom-Json默认将ISO时间转成日期对象，改变签名字段的序列化文本，被422拒绝；使用-DateKind String保持原始字符串后通过。浏览器JSON传输未发生该问题，篡改与去重检查均通过。

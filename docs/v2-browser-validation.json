@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-14T12:53:31.834Z",
+  "browser": "Codex in-app browser through cua_repl",
+  "environment": "local preview",
+  "casePdfHashMatched": true,
+  "realAIExtraction": "E3, source hash matched",
+  "inputLockedWhileProcessing": true,
+  "cloudConfirmObserved": "server version 2, E3 to E3, history present",
+  "comparisonMatrixObserved": true,
+  "sourceLinksObserved": true,
+  "screenshot": "outputs/v2-comparison.png (ignored local artifact)",
+  "limitations": [
+    "Production closure verified by HTTP separately",
+    "Mobile viewport not reverified in v2",
+    "Automated confirmation simulation is not candidate human review"
+  ]
+}

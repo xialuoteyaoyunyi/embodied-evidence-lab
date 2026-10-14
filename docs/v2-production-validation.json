@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-10-14T12:51:49.6236780Z",
+  "environment": "production; validation namespace, automated review",
+  "officialPdfHashMatched": true,
+  "ifindLeadStatus": "returned",
+  "stage": "E3",
+  "model": "kimi-k2.6",
+  "aiRequestId": "chatcmpl-6acf7acd5e0e673494d016aa",
+  "recordPersisted": true,
+  "recordScope": "validation",
+  "recordStorageId": "30010d34-81b5-4f33-819e-aa18e788b6d0",
+  "duplicateDeduplicated": true,
+  "forgedRecordStatus": 422,
+  "askStatus": 200,
+  "askRequestId": "chatcmpl-6acf7ada42a8e540a9e08353",
+  "answer": {
+    "summary": "根据最新确认材料，柯力传感机器人力学传感器2026年1-6月累计销量超2000只，月订单量持续突破千只。但销量增长不代表集团利润增长：2026年上半年集团归母净利润同比下降24.38%，机器人分项收入及利润未单独披露，无法建立销量与集团利润的因果关系。",
+    "findings": [
+      {
+        "kind": "事实",
+        "text": "2026年1-6月机器人力学传感器累计销售超2000只，超过2025年全年出货量；自4月起月订单量持续突破千只。",
+        "evidenceIds": [
+          "LOCAL-1"
+        ]
+      },
+      {
+        "kind": "事实",
+        "text": "2026年1-6月集团营业收入837,754,477.62元（同比+22.27%），归母净利润130,688,021.76元（同比-24.38%）。",
+        "evidenceIds": [
+          "F-KL-H1"
+        ]
+      },
+      {
+        "kind": "推断",
+        "text": "销量增长不代表集团利润增长：集团净利润同比下降，且机器人业务未单列收入与利润，无法从销量推导对集团利润的贡献。",
+        "evidenceIds": [
+          "LOCAL-1",
+          "F-KL-H1"
+        ]
+      },
+      {
+        "kind": "待验证",
+        "text": "机器人力学传感器销量增长是否伴随该子业务自身盈利，以及该子业务对集团利润的具体影响程度，因未披露分项财务数据而待验证。",
+        "evidenceIds": []
+      }
+    ],
+    "boundary": "集团总收入含传统工业传感及并购业务；机器人分项收入及利润未单独披露；销量数据为2026年1-6月半年度统计，非全年数据；未披露机器人力学传感器具体收入金额。"
+  },
+  "researchRecordCount": 0,
+  "passed": true
+}
