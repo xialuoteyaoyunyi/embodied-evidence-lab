@@ -1,0 +1,55 @@
+{
+  "checkedAt": "2026-10-14T11:15:54.6684872Z",
+  "health": {
+    "status": "ok",
+    "aiConfigured": true,
+    "model": "kimi-k2.6",
+    "accessCodeRequired": true,
+    "snapshot": "2026-10-14",
+    "dataMode": "official-materials-and-authorized-fuyao",
+    "ifindConnected": false,
+    "fuyaoConfigured": true,
+    "fuyaoStatus": "configured-query-to-verify"
+  },
+  "withoutCodeStatus": 403,
+  "authorizedStatus": 200,
+  "successfulRequests": 5,
+  "traces": [
+    {
+      "kind": "prices",
+      "status": "ok",
+      "requestId": "66ae9efa72144a2f953870c0587c49f4",
+      "sourceTimestamp": "2026-10-14T11:15:50Z",
+      "error": null
+    },
+    {
+      "kind": "valuations",
+      "status": "ok",
+      "requestId": "436b3330bffa409d9fbd295644e5b92b",
+      "sourceTimestamp": "2026-10-14T11:15:53Z",
+      "error": null
+    },
+    {
+      "kind": "financials:003021.SZ",
+      "status": "ok",
+      "requestId": "105d562a5a0443d3bc05c8c9587fc3fa",
+      "sourceTimestamp": "2026-06-29T16:00:00Z",
+      "error": null
+    },
+    {
+      "kind": "financials:603662.SH",
+      "status": "ok",
+      "requestId": "833bf6a3d13745c6be58837bbd2e69e2",
+      "sourceTimestamp": "2026-06-29T16:00:00Z",
+      "error": null
+    },
+    {
+      "kind": "financials:688322.SH",
+      "status": "ok",
+      "requestId": "6e4dd049a83243b8a9d215695044cc4b",
+      "sourceTimestamp": "2026-06-29T16:00:00Z",
+      "error": null
+    }
+  ],
+  "healthVerificationNote": "Fresh health query with cache-busting check parameter confirmed runtime configuration; prior plain URL returned cached old version. Client now requests fresh health with cache:no-store."
+}
