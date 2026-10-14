@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {compareRecordVersion} from '../lib/version-order.mjs';
+test('new extraction of old publication never overtakes newer publication',()=>{assert.ok(compareRecordVersion({input:{date:'2025-01-01'},createdAt:'2026-10-14'},{input:{date:'2026-08-28'},createdAt:'2026-08-28'})<0);});
+test('same-date evidence chooses signed extraction time regardless of sync ordering',()=>{const old={input:{date:'2026-08-28'},createdAt:'2026-10-14T01:00:00Z'},latest={input:{date:'2026-08-28'},createdAt:'2026-10-14T02:00:00Z'};assert.equal([latest,old].sort(compareRecordVersion).at(-1),latest);assert.equal([old,latest].sort(compareRecordVersion).at(-1),latest);});

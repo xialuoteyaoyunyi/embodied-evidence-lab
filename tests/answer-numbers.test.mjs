@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {validateAnswerNumbers} from '../lib/ai-validation.mjs';
+const context=[{id:'sales',quote:'2026年1-6月销售超2000只，月订单突破千只。'},{id:'finance',claim:'集团收入837754477.62元，同比增长22.27%，不是机器人收入。'}];
+test('fact numbers require cited evidence rather than unrelated company data',()=>{assert.throws(()=>validateAnswerNumbers({findings:[{kind:'事实',text:'销售5000只',evidenceIds:['sales']}]},context));assert.throws(()=>validateAnswerNumbers({findings:[{kind:'事实',text:'收入837754477.62元',evidenceIds:['sales']}]},context));});
+test('supported values, separators and labeled conversions remain supported',()=>{assert.doesNotThrow(()=>validateAnswerNumbers({findings:[{kind:'事实',text:'2026年销量超2000只',evidenceIds:['sales']},{kind:'事实',text:'集团收入8.38亿元，同比22.27%',evidenceIds:['finance']}]},context));});

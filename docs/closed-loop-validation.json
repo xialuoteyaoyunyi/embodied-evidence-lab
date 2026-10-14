@@ -1,0 +1,64 @@
+{
+  "testedAt": "2026-10-14T12:09:16.684Z",
+  "environment": "local preview; automated confirmation simulation, not candidate human review",
+  "officialPdfHashMatched": true,
+  "ifindLeadStatus": "returned",
+  "model": "kimi-k2.6",
+  "promptVersion": "extract-v1.2",
+  "aiRequestId": "chatcmpl-6acf70dea53b981d7fafd9fe",
+  "stage": "E3",
+  "quote": "1-6月份，公司已累计实现机器人力学传感器销售超2000只，超过25年全年的出货量。公司已累计向超过90家人形机器人、协作机器人及工业机器人企业送样，产品涵盖六维力/力矩传感器、关节力矩传感器等关键部件，部分客户已取得批量订单",
+  "sourceVerification": {
+    "status": "official-document-hash-matched",
+    "documentSha256": "4fd422ccf22ae9f80f6488c8889b73bf1d64cd254ce25a28f45713c6bc6e640c",
+    "checkedAt": "2026-10-14T12:08:59.968Z",
+    "locator": "PDF 第9页：（一）机器人传感业务放量提速",
+    "method": "官方PDF下载、SHA-256、pypdf第9页文本抽取并核对；输入片段仅规范化空白，不是独立业务审计",
+    "cached": true
+  },
+  "reviewSignaturePresent": true,
+  "forgedRecordStatus": 422,
+  "cloudPersisted": true,
+  "duplicateDeduplicated": true,
+  "serverVersion": 1,
+  "askPromptVersion": "research-v1.2",
+  "askRequestId": "chatcmpl-6acf70e425756726998010a0",
+  "answer": {
+    "summary": "根据允许调用的证据，2026年上半年机器人力学传感器销量为超2000只（出货量口径），但无确认收入金额；集团营收同比增长而利润同比下降，机器人业务增长与集团利润增长之间无直接推导依据。",
+    "findings": [
+      {
+        "kind": "事实",
+        "text": "2026年1-6月机器人力学传感器累计销售超2000只，超过2025年全年出货量，月订单量持续突破千只。",
+        "evidenceIds": [
+          "LOCAL-1"
+        ]
+      },
+      {
+        "kind": "事实",
+        "text": "2026年1-6月集团营业收入837,754,477.62元（同比+22.27%），归母净利润130,688,021.76元（同比-24.38%）。",
+        "evidenceIds": [
+          "F-KL-H1"
+        ]
+      },
+      {
+        "kind": "推断",
+        "text": "机器人力学传感器销量增长不代表集团利润增长：集团净利润同比下降24.38%，且机器人分项收入及利润未单列，无法建立销量与集团利润的因果关系。",
+        "evidenceIds": [
+          "LOCAL-1",
+          "F-KL-H1"
+        ]
+      },
+      {
+        "kind": "待验证",
+        "text": "机器人力学传感器的具体收入金额、确认收入口径下的销量，以及该业务对集团利润的贡献程度。",
+        "evidenceIds": []
+      }
+    ],
+    "boundary": "证据边界：仅调用LOCAL-1（2026半年报机器人业务）、E-KL-T（触觉战略投资，与销量无关）、F-KL-H1（2026半年报集团财务）。未调用S-KL（2025年报）因不在allowedEvidenceIds中；F-KL-H1明确限制'集团合并口径，不能推导机器人业务收入及利润'，LOCAL-1明确限制'未披露具体收入金额；销量数据为出货量口径，非确认收入口径'。"
+  },
+  "usedEvidenceIds": [
+    "LOCAL-1",
+    "E-KL-T",
+    "F-KL-H1"
+  ]
+}

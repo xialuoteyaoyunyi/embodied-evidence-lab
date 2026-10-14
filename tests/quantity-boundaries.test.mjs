@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {validateAnswerNumbers} from '../lib/ai-validation.mjs';
+const context=[{id:'sales',quote:'销售超2000只，向超过90家企业送样。',locator:'PDF第9页'}];
+test('lower-bound disclosures must not become exact quantities',()=>{assert.throws(()=>validateAnswerNumbers({findings:[{kind:'事实',text:'销售2000只',evidenceIds:['sales']}]},context),/下界/);assert.doesNotThrow(()=>validateAnswerNumbers({findings:[{kind:'事实',text:'销售超2000只，送样超过90家',evidenceIds:['sales']}]},context));});
+test('page references and Chinese axis counts remain grounded',()=>{assert.doesNotThrow(()=>validateAnswerNumbers({findings:[{kind:'事实',text:'见第9页',evidenceIds:['sales']}]},context));assert.doesNotThrow(()=>validateAnswerNumbers({findings:[{kind:'事实',text:'6维力测量',evidenceIds:['six']}]},[{id:'six',claim:'六维力测量'}]));});

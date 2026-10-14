@@ -1,0 +1,31 @@
+{
+  "id": "keli-2026h1",
+  "company": "柯力传感",
+  "companyId": "keli",
+  "branch": "force",
+  "concept": "机器人力学传感器",
+  "title": "柯力传感2026年半年度报告",
+  "url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225518537.PDF",
+  "date": "2026-08-28",
+  "locator": "PDF 第9页：（一）机器人传感业务放量提速",
+  "text": "报告期内，公司机器人力学传感器业务由小批量生产加快向批量化供应过渡，自4月份以来，月订单量持续突破千只，收入规模快速提升。1-6月份，公司已累计实现机器人力学传感器销售超2000只，超过25年全年的出货量。公司已累计向超过90家人形机器人、协作机器人及工业机器人企业送样，产品涵盖六维力/力矩传感器、关节力矩传感器等关键部件，部分客户已取得批量订单，多家头部客户处于验证阶段；应用于AI理疗机器人、人形机器人等场景的产品实现批量出货，部分传感器产品已通过下游客户间接进入整车企业供应链体系，产品性能与可靠性获得市场认可。",
+  "documentSha256": "4fd422ccf22ae9f80f6488c8889b73bf1d64cd254ce25a28f45713c6bc6e640c",
+  "expectedStage": "E3",
+  "period": "2026年1–6月",
+  "auditMethod": "官方PDF下载、SHA-256、pypdf第9页文本抽取并核对；输入片段仅规范化空白，不是独立业务审计",
+  "financials": {
+    "revenue": 837754477.62,
+    "netProfit": 130688021.76,
+    "adjustedNetProfit": 135595893.56,
+    "operatingCashFlow": 130165073.62,
+    "revenueGrowth": 22.27,
+    "netProfitGrowth": -24.38,
+    "adjustedNetProfitGrowth": 24.89,
+    "cashFlowGrowth": 28.27,
+    "currency": "CNY",
+    "unit": "元",
+    "scope": "集团合并",
+    "locator": "PDF 第5页：2026年1–6月主要会计数据"
+  },
+  "inference": "订单和销售支持机器人业务已进入商业供应阶段，但未单列机器人收入及毛利；集团增长不能直接归因于机器人业务。"
+}
